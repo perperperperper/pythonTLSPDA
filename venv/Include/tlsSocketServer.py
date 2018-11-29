@@ -1,3 +1,5 @@
+# This program is not yet tested
+# Per Dahlstroem pda@ucl.dk
 import socket, ssl
 
 HOST, PORT = '127.0.0.1', 443
