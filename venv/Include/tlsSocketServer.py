@@ -1,8 +1,3 @@
-# SSL socket server from
-# https://carlo-hamalainen.net/2013/01/24/
-# python-ssl-socket-echo-test-with-self-signed-certificate/
-# By Per Dahsltroem pda@ucl.dk
-# 29-11-2018
 import socket, ssl
 
 HOST, PORT = '127.0.0.1', 443
@@ -12,7 +7,6 @@ def handle(conn):
     print(conn.recv().decode())
 
 def main():
-    testModulePDA.printMyName()
     sock = socket.socket(socket.AF_INET)
     context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
     context.options |= ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1  # optional
