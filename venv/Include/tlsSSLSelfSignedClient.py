@@ -1,3 +1,8 @@
+# SSL socket client from
+# https://carlo-hamalainen.net/2013/01/24/
+# python-ssl-socket-echo-test-with-self-signed-certificate/
+# By Per Dahsltroem pda@ucl.dk
+# 29-11-2018
 import socket, ssl, pprint
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -14,7 +19,8 @@ print(repr(ssl_sock.getpeername()))
 print(ssl_sock.cipher())
 print(pprint.pformat(ssl_sock.getpeercert()))
 
-ssl_sock.write("boo!")
+# ssl_sock.write("boo!")
+ssl_sock.write("boo!".encode())
 
 if False: # from the Python 2.7.3 docs
     # Set a simple HTTP request -- use httplib in actual code.
