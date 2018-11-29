@@ -1,4 +1,4 @@
-# SSL socket client from
+# SSL socket client from 2013
 # https://carlo-hamalainen.net/2013/01/24/
 # python-ssl-socket-echo-test-with-self-signed-certificate/
 # By Per Dahsltroem pda@ucl.dk

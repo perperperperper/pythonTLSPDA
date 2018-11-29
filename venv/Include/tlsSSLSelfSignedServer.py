@@ -1,4 +1,4 @@
-# SSL socket server from
+# SSL socket server from 2013
 # https://carlo-hamalainen.net/2013/01/24/
 # python-ssl-socket-echo-test-with-self-signed-certificate/
 # By Per Dahsltroem pda@ucl.dk
@@ -21,7 +21,9 @@ def deal_with_client(connstream):
         data = connstream.read()
 
 while True:
+    print('Await incomming connection on: ', bindsocket.getsockname())
     newsocket, fromaddr = bindsocket.accept()
+    print('Connection accepted from: ', fromaddr)
     connstream = ssl.wrap_socket(newsocket,
                                  server_side=True,
                                  certfile="server.crt",
